@@ -1,19 +1,14 @@
 package com.example.mapping;
 
 import androidx.annotation.NonNull;
-
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -58,6 +53,12 @@ public class MainActivity extends AppCompatActivity {
         String s = item.getTitle().toString();
         double x = Double.parseDouble(num1.getText().toString());
         double y = Double.parseDouble(num2.getText().toString());
+
+        if (s.equals("clear")){
+            answer.setText("");
+            num1.setText("");
+            num2.setText("");
+        }
 
         if (chek()) {
 
